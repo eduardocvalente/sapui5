@@ -8,11 +8,10 @@ sap.ui.define([
     return Controller.extend("myapp.controller.Main", {
 
         onInit: function () {
-            // Cria o modelo com propriedades para a listagem, detalhes e criação de nota fiscal
             var oModel = new JSONModel({
                 invoices: [],
                 selectedInvoice: {},
-                // Modelo para criação de nova nota fiscal
+            
                 newInvoice: {
                     customer: {
                         name: "",
