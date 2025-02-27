@@ -3,10 +3,12 @@
     xmlns="sap.m"
     controllerName="myapp.view.Main">
     <App>
-        <Page title="SAPUI5 Local App">
+        <Page title="Notas Fiscais">
             <content>
-                <Button text="Click Me" press="onPress"/>
-                <Text id="myText" text="Hello, SAPUI5!" />
+                <SearchField id="searchField" placeholder="Pesquisar..." liveChange="onSearch"/>
+                <List id="invoiceList" items="{/invoices}">
+                    <StandardListItem title="{NumeroNota}" description="{Valor}" type="Active" press="onSelectInvoice"/>
+                </List>
             </content>
         </Page>
     </App>
