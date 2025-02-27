@@ -1,33 +1,27 @@
 <mvc:View
+    controllerName="myapp.controller.Main"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m"
-    controllerName="myapp.view.Main">
-
+    xmlns="sap.m">
     <App>
         <Page title="Notas Fiscais">
             <content>
-
                 <!-- Campo de busca -->
                 <SearchField id="searchField"
                              placeholder="Pesquisar pelo Número da Nota..."
                              liveChange="onSearch" />
-
-                <!-- Botão para abrir o Dialog de cadastro -->
+                <!-- Botão para criar nova nota -->
                 <Button text="Nova Nota"
                         icon="sap-icon://add-document"
                         press="onOpenCreateDialog" />
-
                 <!-- Lista de notas -->
                 <List id="invoiceList" items="{/invoices}">
                     <StandardListItem
-                        title="{NumeroNota}"
-                        description="{Valor}"
+                        title="{invoiceId}"
+                        description="Cliente: {customer/name}"
                         type="Active"
                         press="onSelectInvoice" />
                 </List>
-
             </content>
         </Page>
     </App>
-
 </mvc:View>

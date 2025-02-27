@@ -1,0 +1,29 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog
+         title="Criar Nota Fiscal"
+         stretchOnPhone="true">
+         <content>
+             <VBox>
+                 <Label text="Cliente: Nome"/>
+                 <Input value="{/newInvoice/customer/name}" placeholder="Nome do Cliente"/>
+                 <Label text="Cliente: Email"/>
+                 <Input value="{/newInvoice/customer/email}" placeholder="Email do Cliente"/>
+                 <Label text="Cliente: Rua"/>
+                 <Input value="{/newInvoice/customer/address/street}" placeholder="Rua"/>
+                 <Label text="Fornecedor: Nome"/>
+                 <Input value="{/newInvoice/supplier/name}" placeholder="Nome do Fornecedor"/>
+                 <Label text="Fornecedor: Email"/>
+                 <Input value="{/newInvoice/supplier/email}" placeholder="Email do Fornecedor"/>
+                 <!-- Adicione mais campos conforme necessário -->
+             </VBox>
+         </content>
+         <beginButton>
+             <Button text="Salvar" press="onSaveInvoice"/>
+         </beginButton>
+         <endButton>
+             <Button text="Cancelar" press="onCancelCreate"/>
+         </endButton>
+    </Dialog>
+</core:FragmentDefinition>

@@ -1,21 +1,22 @@
 {
     "_version": "1.12.0",
     "sap.app": {
-        "id": "myapp",
-        "type": "application",
-        "applicationVersion": { "version": "1.0.0" }
+      "id": "myapp",
+      "type": "application",
+      "applicationVersion": { "version": "1.0.0" }
     },
     "sap.ui5": {
-        "rootView": {
-            "viewName": "myapp.view.Main",
-            "type": "XML",
-            "async": true
-        },
-        "dependencies": {
-            "minUI5Version": "1.108.0"
-        },
-        "config": {
-            "preload": "off"
-        }
+      "rootView": {
+        "viewName": "myapp.view.Main",
+        "type": "XML",
+        "async": true
+      },
+      "dependencies": {
+        "minUI5Version": "1.108.0"
+      },
+      "config": {
+        "preload": "off"
+      }
     }
-}
+  }
+  
