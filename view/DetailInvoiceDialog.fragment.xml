@@ -1,0 +1,40 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Dialog id="detailDialog"
+            title="Detalhes da Nota"
+            stretchOnPhone="true"
+            class="sapUiContentPadding">
+
+        <VBox class="sapUiSmallMargin">
+            <ObjectHeader
+                title="Nota Fiscal"
+                number="{/selectedInvoice/NumeroNota}" />
+
+            <ObjectAttribute
+                title="Valor"
+                text="{/selectedInvoice/Valor}" />
+
+            <ObjectAttribute
+                title="Cliente"
+                text="{/selectedInvoice/Cliente/Nome}" />
+
+            <ObjectAttribute
+                title="Fornecedor"
+                text="{/selectedInvoice/Fornecedor/Nome}" />
+
+            <!-- Caso queira exibir itens, pode colocar um List abaixo -->
+            <!-- Exemplo: 
+            <List items="{/selectedInvoice/items}">
+              <ObjectListItem title="{productName}" number="{quantity}" numberUnit="Qtd" />
+            </List>
+            -->
+        </VBox>
+
+        <endButton>
+            <Button text="Fechar"
+                    press="onCloseDetail" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

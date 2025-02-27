@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
     <title>Notas Fiscais - SAPUI5</title>
-    <script id="sap-ui-bootstrap"
-            src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
-            data-sap-ui-theme="sap_fiori_3"
-            data-sap-ui-libs="sap.m"
-            data-sap-ui-resourceroots='{"myapp": "./"}'>
+    <script
+      id="sap-ui-bootstrap"
+      src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+      data-sap-ui-libs="sap.m"
+      data-sap-ui-theme="sap_fiori_3"
+      data-sap-ui-resourceroots='{"myapp": "./"}'>
     </script>
+
     <script>
-        sap.ui.getCore().attachInit(function () {
-            new sap.ui.core.ComponentContainer({
-                name: "myapp",
-                settings: { id: "myApp" },
-                async: true
-            }).placeAt("content");
-        });
+      sap.ui.getCore().attachInit(function () {
+        new sap.ui.core.ComponentContainer({
+          name: "myapp",
+          settings: { id: "myApp" },
+          async: true
+        }).placeAt("content");
+      });
     </script>
-</head>
-<body class="sapUiBody">
+  </head>
+  <body class="sapUiBody">
     <div id="content"></div>
-</body>
+  </body>
 </html>
