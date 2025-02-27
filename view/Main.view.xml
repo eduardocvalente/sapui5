@@ -1,0 +1,13 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="myapp.view.Main">
+    <App>
+        <Page title="SAPUI5 Local App">
+            <content>
+                <Button text="Click Me" press="onPress"/>
+                <Text id="myText" text="Hello, SAPUI5!" />
+            </content>
+        </Page>
+    </App>
+</mvc:View>

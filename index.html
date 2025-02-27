@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My SAPUI5 App</title>
+    <script id="sap-ui-bootstrap"
+            src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+            data-sap-ui-theme="sap_fiori_3"
+            data-sap-ui-libs="sap.m"
+            data-sap-ui-resourceroots='{"myapp": "./"}'
+            defer>
+    </script>
+    <script>
+        window.onload = function() {
+            if (typeof sap !== "undefined" && sap.ui) {
+                sap.ui.getCore().attachInit(function () {
+                    new sap.ui.core.ComponentContainer({
+                        name: "myapp",
+                        settings: { id: "myApp" },
+                        async: true
+                    }).placeAt("content");
+                });
+            } else {
+                console.error("SAP UI5 não foi carregado corretamente. Verifique o link do SDK.");
+            }
+        };
+    </script>
+</head>
+<body class="sapUiBody">
+    <div id="content"></div>
+</body>
+</html>
