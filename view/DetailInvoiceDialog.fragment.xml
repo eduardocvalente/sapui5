@@ -1,0 +1,44 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+  <Dialog
+       title="Detalhes da Nota Fiscal"
+       stretchOnPhone="true"
+       binding="{/selectedInvoice}">
+       <content>
+         <VBox>
+           <Label text="Cliente:"/>
+           <Text text="{customer/name}"/>
+           <Label text="Fornecedor:"/>
+           <Text text="{supplier/name}"/>
+           <Label text="Itens:"/>
+         
+             <List items="{items}">
+              <CustomListItem>
+                    <VBox>
+                        <!-- Nome do Produto -->
+                        <Label text="{productName}" design="Bold" />
+        
+                       <!-- Linha com Quantidade e Preço -->
+                        <HBox justifyContent="SpaceBetween" width="100%">
+                            <!-- Quantidade -->
+                            <HBox alignItems="Center">
+                                <Label text="Quantidade:" />
+                                <Text text="{quantity}" />
+                            </HBox>
+                            <!-- Preço -->
+                            <HBox alignItems="Center">
+                                <Label text="Preço:" />
+                                <Text text="{unitPrice}" />
+                            </HBox>
+                        </HBox>
+                    </VBox>
+                </CustomListItem>
+            </List>
+       </VBox>
+       </content>
+       <endButton>
+         <Button text="Fechar" press="onCloseDetail"/>
+       </endButton>
+  </Dialog>
+</core:FragmentDefinition>
