@@ -14,12 +14,25 @@
                         icon="sap-icon://add-document"
                         press="onOpenCreateDialog" />
                 <!-- Lista de notas -->
-                <List id="invoiceList" items="{/invoices}">
-                    <StandardListItem
-                        title="{invoiceId}"
-                        description="Cliente: {customer/name}"
-                        type="Active"
-                        press="onSelectInvoice" />
+                <List id="invoiceList" items="{/invoices}" class="invoiceList">
+                    <CustomListItem type="Active"
+                                    press="onSelectInvoice"
+                                    class="invoiceItem">
+                        <VBox class="invoiceVBox" width="100%">
+                            <HBox class="invoiceHeader"
+                                  justifyContent="SpaceBetween"
+                                  width="100%">
+                                <Label text="Fatura:" class="invoiceLabelBold"/>
+                                <Text text="{invoiceId}" class="invoiceTextBold"/>
+                            </HBox>
+                            <HBox class="invoiceCustomer"
+                                  alignItems="Center"
+                                  width="100%">
+                                <Label text="Cliente:" class="invoiceLabel"/>
+                                <Text text="{customer/name}" class="invoiceText"/>
+                            </HBox>
+                        </VBox>
+                    </CustomListItem>
                 </List>
             </content>
         </Page>

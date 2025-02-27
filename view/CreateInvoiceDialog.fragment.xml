@@ -16,7 +16,7 @@
                  <Input value="{/newInvoice/supplier/name}" placeholder="Nome do Fornecedor"/>
                  <Label text="Fornecedor: Email"/>
                  <Input value="{/newInvoice/supplier/email}" placeholder="Email do Fornecedor"/>
-                 <!-- Adicione mais campos conforme necessário -->
+           
              </VBox>
          </content>
          <beginButton>
